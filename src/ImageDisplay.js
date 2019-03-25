@@ -29,11 +29,20 @@ class ImageDisplay extends Component {
             const imgsList = this.state.IMGS.map((img) =>
                 <img src={img} />
             );
-            return (
-                <div className="singleCol">
-                    {imgsList}
-                </div>
-            )
+            if (this.state.columns == 0) {
+                return (
+                    <div className="singleCol">
+                        {imgsList}
+                    </div>
+                )
+            } else
+                return (
+                    <div className="Container">
+                        <div className="singleCol">
+                            {imgsList}
+                        </div>
+                    </div>
+                )
         }
 
         else {

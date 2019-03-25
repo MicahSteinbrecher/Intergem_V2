@@ -24,15 +24,24 @@ class App extends Component {
     }
 
     render() {
-        if (this.state.columns==0) {
+        if (this.state.columns===0) {
             return (
                 <div className="App">
+                    <div className='topMenu'>
+                        <h2 className="Title"> Intergem </h2>
+                        <p className="topItem">Favorites</p>
+                        <p className="topItem">Engagement Rings</p>
+                        <p className="topItem">Fine Jewelry</p>
+                        <p className="topItem">Contact</p>
+
+                    </div>
                     <ImageDisplay columns={this.state.columns}/>
                 </div>
             );
         } else {
             return (
                 <div className="App">
+                    <div className='Space' />
                     <div className='Menu'>
                         <h2 className="Header"> Intergem</h2>
                         <p className="Item"> Favorites </p>
