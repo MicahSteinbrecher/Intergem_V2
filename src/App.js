@@ -10,6 +10,7 @@ class App extends Component {
         let displayWidth = props.windowWidth - 400;
         this.state = {
             columns: Math.floor(displayWidth/500),
+            isOpen: false,
         }
     }
 
@@ -52,7 +53,7 @@ class App extends Component {
                         <p className="Contact"> Contact</p>
                         <p className="Author">&copy; Micah Steinbrecher</p>
                     </div>
-                    <ImageDisplay columns={this.state.columns} />
+                    <ImageDisplay columns={this.state.columns}/>
                 </div>
             );
         }
