@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import '../src/App.css';
 
-import IMG1 from "./DSC00210.jpg";
-import IMG2 from "./IMG2.jpg";
-import IMG3 from "./DSC00240.JPG"
+import IMG1 from "./bracelet.jpg";
+import IMG2 from "./DSC00210.jpg";
+import IMG3 from "./IMG2.jpg";
+//import IMG3 from "./DSC00240.jpg"
 import IMG4 from "./IMG4.jpg";
 import Lightbox from 'react-images';
 

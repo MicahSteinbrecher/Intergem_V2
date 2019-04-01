@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import ImageDisplay from "./ImageDisplay";
 import windowSize from "react-window-size";
+import Menu from './Menu.js';
 
 
 class App extends Component {
@@ -25,38 +26,13 @@ class App extends Component {
     }
 
     render() {
-        if (this.state.columns===0) {
-            return (
-                <div className="App">
-                    <div className='topMenu'>
-                        <h2 className="Title"> Intergem </h2>
-                        <p className="topItem">Favorites</p>
-                        <p className="topItem">Engagement Rings</p>
-                        <p className="topItem">Fine Jewelry</p>
-                        <p className="topItem">Contact</p>
-
-                    </div>
-                    <ImageDisplay columns={this.state.columns}/>
-                </div>
-            );
-        } else {
-            return (
-                <div className="App">
-                    <div className='Space' />
-                    <div className='Menu'>
-                        <h2 className="Header"> Intergem</h2>
-                        <p className="Item"> Favorites </p>
-                        <p className="Item"> Engagement Rings</p>
-                        <p className="Item"> Fine Jewelry</p>
-                        <p className="Item"></p>
-                        <br/>
-                        <p className="Contact"> Contact</p>
-                        <p className="Author">&copy; Micah Steinbrecher</p>
-                    </div>
-                    <ImageDisplay columns={this.state.columns}/>
-                </div>
-            );
-        }
+        return (
+            <div className="App">
+                <div className='Space' />
+                <Menu columns={this.state.columns}/>
+                <ImageDisplay columns={this.state.columns}/>
+            </div>
+        );
     }
 }
 
