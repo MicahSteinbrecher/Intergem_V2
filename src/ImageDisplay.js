@@ -6,6 +6,7 @@ import IMG2 from "./DSC00210.jpg";
 import IMG3 from "./IMG2.jpg";
 //import IMG3 from "./DSC00240.jpg"
 import IMG4 from "./IMG4.jpg";
+import imgs from "./Imgs";
 import Lightbox from 'react-images';
 
 
@@ -14,25 +15,8 @@ class ImageDisplay extends Component {
         super(props);
 
         this.state = {
+            IMGS: imgs[1],
             columns: props.columns,
-            IMGS: [
-                {
-                    src: IMG1,
-                    caption: 'Bracelet'
-                },
-                {
-                    src: IMG2,
-                    caption: 'Pink Diamond'
-                },
-                {
-                    src: IMG3,
-                    caption: 'Earings'
-                },
-                {
-                    src: IMG4,
-                    caption: 'Pink Diamond'
-                },
-            ],
             isOpen: false,
             imageIndex: 0,
         }

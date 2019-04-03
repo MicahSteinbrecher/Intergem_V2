@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import ImageDisplay from "./ImageDisplay";
-import windowSize from "react-window-size";
+import Filter from "./Filter";
 
 
 class Menu extends Component {
@@ -25,11 +24,13 @@ class Menu extends Component {
                 <div className='Menu'>
                     <div>
                         <h2 className="Header"> Intergem</h2>
-                        <p className="Item"> Favorites </p>
-                        <p className="Item"> Engagement Rings</p>
-                        <p className="Item"> Fine Jewelry</p>
+                        <p className="Item" onClick={()=>this.props.onClick(0)}> Favorites </p>
+                        <p className="Item" onClick={()=>this.props.onClick(1)}> Engagement Rings</p>
+                        <p className="Item" onClick={()=>this.props.onClick(2)}> Wedding Bands</p>
+                        <p className="Item" onClick={()=>this.props.onClick(3)}> Fine Jewelry</p>
                         <p className="Contact">  </p>
                     </div>
+                    <Filter/>
                     <div>
                         <p className="Item"> P: (214) 742-3771 </p>
                         <p className="Item"> E: Intergem@att.net </p>

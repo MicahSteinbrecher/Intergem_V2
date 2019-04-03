@@ -12,6 +12,7 @@ class App extends Component {
         this.state = {
             columns: Math.floor(displayWidth/500),
             isOpen: false,
+            activeScreen: 1,
         }
     }
 
@@ -25,12 +26,19 @@ class App extends Component {
         }
     }
 
+    handleClick = (index) => {
+        this.setState({
+            activeScreen: index,
+        })
+    }
+
+
     render() {
         return (
             <div className="App">
                 <div className='Space' />
-                <Menu columns={this.state.columns}/>
-                <ImageDisplay columns={this.state.columns}/>
+                <Menu columns={this.state.columns} onClick={()=>this.handleClick()} activeScreen={this.state.activeScreen}/>
+                <ImageDisplay columns={this.state.columns} activeScreen={this.state.activeScreen}/>
             </div>
         );
     }
