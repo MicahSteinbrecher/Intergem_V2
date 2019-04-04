@@ -13,6 +13,7 @@ class App extends Component {
             columns: Math.floor(displayWidth/500),
             isOpen: false,
             activeScreen: 1,
+            styles: [[],[],[],[]],
         }
     }
 
@@ -27,10 +28,26 @@ class App extends Component {
     }
 
     handleClick = (index) => {
-        console.log('handle click fireed at index: ' + index);
         this.setState({
             activeScreen: index,
         })
+    }
+
+    handleSelect = (activeScreen, category, style) => {
+        console.log('handle select fired: ');
+        console.log('screen: ' + activeScreen + ', category: ' + category + ', style: ' + style);
+        let styles= this.state.styles;
+        styles[activeScreen][category] = style;
+        this.setState({
+                styles: styles,
+            }
+        );
+    }
+
+    resetFilter= () => {
+        this.setState({
+            styles: [[],[],[],[]],
+        });
     }
 
 
@@ -38,7 +55,7 @@ class App extends Component {
         return (
             <div className="App">
                 <div className='Space' />
-                <Menu columns={this.state.columns} onClick={this.handleClick} activeScreen={this.state.activeScreen}/>
+                <Menu resetFilter={this.resetFilter} styles={this.state.styles} onSelect={this.handleSelect} columns={this.state.columns} onClick={this.handleClick} activeScreen={this.state.activeScreen}/>
                 <ImageDisplay columns={this.state.columns} activeScreen={this.state.activeScreen}/>
             </div>
         );

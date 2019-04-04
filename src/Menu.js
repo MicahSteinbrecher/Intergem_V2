@@ -30,7 +30,7 @@ class Menu extends Component {
                         <p className="Item" onClick={()=>this.props.onClick(3)}> Fine Jewelry</p>
                         <p className="Contact">  </p>
                     </div>
-                    <Filter activeScreen={this.props.activeScreen}/>
+                    <Filter resetFilter={this.props.resetFilter} activeScreen={this.props.activeScreen} styles={this.props.styles} onSelect={this.props.onSelect}/>
                     <div>
                         <p className="Item"> P: (214) 742-3771 </p>
                         <p className="Item"> E: Intergem@att.net </p>

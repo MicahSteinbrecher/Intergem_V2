@@ -114,6 +114,8 @@
 }
 
 .Category {
+  margin-bottom: 0;
+  align-self: center;
   font-family: "default";
   color: aliceblue;
 }

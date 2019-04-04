@@ -90,66 +90,108 @@ const weddingBands = [
 const engagementRings = [
     {
         src: ENG1,
+        metal: 'white_gold',
+        style: ['halo']
     },
     {
         src: ENG2,
+        metal: 'white_gold',
+        style: ['halo', 'vintage']
     },
     {
         src: ENG3,
+        metal: 'white_gold',
+        style: ['halo']
     },
     {
         src: ENG4,
+        metal: 'white_gold',
+        style: ['halo']
     },
     {
         src: ENG5,
+        metal: 'white_gold',
+        style: ['halo']
     },
     {
         src: ENG6,
+        metal: 'white_gold',
+        style: ['halo']
     },
     {
         src: ENG7,
+        metal: 'white_gold',
+        style: ['halo']
     },
     {
         src: ENG8,
+        metal: 'white_gold',
+        style: ['halo']
     },
     {
         src: ENG9,
+        metal: 'white_gold',
+        style: ['halo']
     },
     {
         src: ENG10,
+        metal: 'white_gold',
+        style: ['halo']
     },
     {
         src: ENG11,
+        metal: 'white_gold',
+        style: ['halo']
     },
     {
         src: ENG12,
+        metal: 'white_gold',
+        style: ['halo']
     },
     {
         src: ENG13,
+        metal: 'white_gold',
+        style: ['halo']
     },
     {
         src: ENG14,
+        metal: 'white_gold',
+        style: ['halo']
     },
     {
         src: ENG15,
+        metal: 'white_gold',
+        style: ['fancy']
     },
     {
         src: ENG16,
+        metal: 'white_gold',
+        style: ['halo']
     },
     {
         src: ENG17,
+        metal: 'white_gold',
+        style: ['halo']
     },
     {
         src: ENG18,
+        metal: 'white_gold',
+        style: ['halo']
     },
     {
         src: ENG19,
+        metal: 'white_gold',
+        style: ['fancy']
     },
     {
         src: ENG20,
+        metal: 'white_gold',
+        style: ['halo']
     },
     {
         src: ENG21,
+        metal: 'white_gold',
+        style: ['halo']
     },
 ];
 
