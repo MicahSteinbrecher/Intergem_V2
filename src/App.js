@@ -27,6 +27,7 @@ class App extends Component {
     }
 
     handleClick = (index) => {
+        console.log('handle click fireed at index: ' + index);
         this.setState({
             activeScreen: index,
         })
@@ -37,7 +38,7 @@ class App extends Component {
         return (
             <div className="App">
                 <div className='Space' />
-                <Menu columns={this.state.columns} onClick={()=>this.handleClick()} activeScreen={this.state.activeScreen}/>
+                <Menu columns={this.state.columns} onClick={this.handleClick} activeScreen={this.state.activeScreen}/>
                 <ImageDisplay columns={this.state.columns} activeScreen={this.state.activeScreen}/>
             </div>
         );

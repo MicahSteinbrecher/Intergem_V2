@@ -7,6 +7,10 @@
   padding: 50px;
   align-items: center;
 }
+
+.filter {
+  height: 300px;
+}
 .Space {
   position: fixed;
   top: 0;
@@ -109,6 +113,11 @@
   color: aliceblue;
 }
 
+.Category {
+  font-family: "default";
+  color: aliceblue;
+}
+
 .container-fluid {
   height: 100vh;
   border-color: white;
@@ -157,7 +166,15 @@
 }
 
 .row {
-  height: 100vh;
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.marginTop {
+  margin-top: 50px;
 }
 
 .App-link {

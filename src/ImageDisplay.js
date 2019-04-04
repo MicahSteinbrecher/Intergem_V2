@@ -26,6 +26,9 @@ class ImageDisplay extends Component {
         if (prevProps.columns !== this.props.columns) {
             this.setState({columns: this.props.columns});
         }
+        if (prevProps.activeScreen !== this.props.activeScreen) {
+            this.setState({IMGS: imgs[this.props.activeScreen]});
+        }
     }
 
     handleClose = () => {
@@ -92,7 +95,6 @@ class ImageDisplay extends Component {
         else {
             var imgsLists = [];
             for (let i=0; i < this.state.IMGS.length; i++){
-                console.log(i%this.state.columns);
                 if (i < this.state.columns) {
                     imgsLists[i] = [this.state.IMGS[i].src];
                 } else {
