@@ -42,156 +42,184 @@ const Favorites = [];
 const weddingBands = [
     {
         src: WED1,
+        style: 'Eternity',
     },
     {
         src: WED2,
+        style: 'Eternity',
+
     },
     {
         src: WED3,
+        style: 'Eternity',
+
     },
     {
         src: WED4,
+        style: 'Wedding',
     },
     {
         src: WED5,
+        style: 'Wedding',
+
     },
     {
         src: WED6,
+        style: 'Wedding',
+
     },
     {
         src: WED7,
+        style: 'Wedding',
+
     },
     {
         src: WED8,
+        style: 'Eternity',
+
     },
     {
         src: WED9,
+        style: 'Eternity',
+
     },
     {
         src: WED10,
+        style: 'Eternity',
+
     },
     {
         src: WED11,
+        style: 'Eternity',
+
     },
     {
         src: WED12,
+        style: 'Eternity',
+
     },
     {
         src: WED13,
+        style: 'Eternity',
+
     },
     {
         src: WED14,
+        style: 'Eternity',
+
     },
     {
         src: WED15,
+        style: 'Eternity',
+
     }
 ];
 
 const engagementRings = [
     {
         src: ENG1,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'Platinum',
+        style: ['Halo','Vintage']
     },
     {
         src: ENG2,
-        metal: 'white_gold',
-        style: ['halo', 'vintage']
+        metal: 'White Gold',
+        style: ['Halo', 'Vintage']
     },
     {
         src: ENG3,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'White Gold',
+        style: ['Halo']
     },
     {
         src: ENG4,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'Platinum',
+        style: ['Halo']
     },
     {
         src: ENG5,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'White Gold',
+        style: ['Halo']
     },
     {
         src: ENG6,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'White Gold',
+        style: ['Halo']
     },
     {
         src: ENG7,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'Platinum',
+        style: ['Halo']
     },
     {
         src: ENG8,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'Platinum',
+        style: ['Halo']
     },
     {
         src: ENG9,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'Platinum',
+        style: ['Halo']
     },
     {
         src: ENG10,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'White Gold',
+        style: ['Halo']
     },
     {
         src: ENG11,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'White Gold',
+        style: ['Halo']
     },
     {
         src: ENG12,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'White Gold',
+        style: ['Halo']
     },
     {
         src: ENG13,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'White Gold',
+        style: ['Halo']
     },
     {
         src: ENG14,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'White Gold',
+        style: ['Halo']
     },
     {
         src: ENG15,
-        metal: 'white_gold',
-        style: ['fancy']
+        metal: 'White Gold',
+        style: ['Fancy']
     },
     {
         src: ENG16,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'White Gold',
+        style: ['Halo']
     },
     {
         src: ENG17,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'White Gold',
+        style: ['Halo']
     },
     {
         src: ENG18,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'White Gold',
+        style: ['Halo']
     },
     {
         src: ENG19,
-        metal: 'white_gold',
-        style: ['fancy']
+        metal: 'White Gold',
+        style: ['Fancy']
     },
     {
         src: ENG20,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'White Gold',
+        style: ['Halo']
     },
     {
         src: ENG21,
-        metal: 'white_gold',
-        style: ['halo']
+        metal: 'White Gold',
+        style: ['Halo']
     },
 ];
 

@@ -3,6 +3,7 @@ import './App.css';
 import ImageDisplay from "./ImageDisplay";
 import windowSize from "react-window-size";
 import Menu from './Menu.js';
+import SCREENS from './Screens.js';
 
 
 class App extends Component {
@@ -13,7 +14,17 @@ class App extends Component {
             columns: Math.floor(displayWidth/500),
             isOpen: false,
             activeScreen: 1,
-            styles: [[],[],[],[]],
+            styles: {
+                favorites: {},
+                engagementRings: {
+                    metal: '',
+                    style: '',
+                },
+                weddingBands: {
+                    style: ''
+                },
+                fineJewelry: {}
+            },
         }
     }
 
@@ -34,19 +45,29 @@ class App extends Component {
     }
 
     handleSelect = (activeScreen, category, style) => {
-        console.log('handle select fired: ');
-        console.log('screen: ' + activeScreen + ', category: ' + category + ', style: ' + style);
-        let styles= this.state.styles;
-        styles[activeScreen][category] = style;
+        console.log('new filter selection for: ' + SCREENS[activeScreen]);
+        let newStyles = JSON.parse(JSON.stringify(this.state.styles));
+        newStyles[SCREENS[activeScreen]][category]=style;
+
         this.setState({
-                styles: styles,
+                styles: newStyles,
             }
         );
     }
 
     resetFilter= () => {
         this.setState({
-            styles: [[],[],[],[]],
+            styles: {
+                favorites: {},
+                engagementRings: {
+                    metal: '',
+                    style: '',
+                },
+                weddingBands: {
+                    style: ''
+                },
+                fineJewelry: {}
+            },
         });
     }
 
@@ -56,7 +77,7 @@ class App extends Component {
             <div className="App">
                 <div className='Space' />
                 <Menu resetFilter={this.resetFilter} styles={this.state.styles} onSelect={this.handleSelect} columns={this.state.columns} onClick={this.handleClick} activeScreen={this.state.activeScreen}/>
-                <ImageDisplay columns={this.state.columns} activeScreen={this.state.activeScreen}/>
+                <ImageDisplay styles={this.state.styles} columns={this.state.columns} activeScreen={this.state.activeScreen}/>
             </div>
         );
     }

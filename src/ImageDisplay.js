@@ -8,7 +8,7 @@ import IMG3 from "./IMG2.jpg";
 import IMG4 from "./IMG4.jpg";
 import imgs from "./Imgs";
 import Lightbox from 'react-images';
-
+import SCREENS from './Screens';
 
 class ImageDisplay extends Component {
     constructor(props) {
@@ -23,12 +23,64 @@ class ImageDisplay extends Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
+        let activeScreen = this.props.activeScreen;
+
         if (prevProps.columns !== this.props.columns) {
             this.setState({columns: this.props.columns});
         }
+
         if (prevProps.activeScreen !== this.props.activeScreen) {
             this.setState({IMGS: imgs[this.props.activeScreen]});
+        } else if (JSON.stringify(this.props.styles[SCREENS[activeScreen]])!== JSON.stringify(prevProps.styles[SCREENS[activeScreen]])){
+            console.log('filter update');
+            this.filterImages();
         }
+    }
+
+    filterImages() {
+        console.log('fire image filter');
+        let activeScreen = this.props.activeScreen;
+        let imgSet = imgs[activeScreen];
+        let styles = this.props.styles[SCREENS[activeScreen]];
+        let result = [];
+        debugger;
+        let keys = Object.keys(styles);
+        for (let i = 0; i < imgSet.length; i++) {
+            for (let j = 0; j < keys.length; j++) {
+                //checks if filter is set
+                if (!styles[keys[j]]) {
+                    if (keys.length-1 === j){
+                        result.push(imgSet[i]);
+                        break;
+                    }
+                    continue;
+                }
+
+                //filters images when meta data is array
+                if (Array.isArray(imgSet[i][keys[j]])){
+                    if (imgSet[i][keys[j]].includes(styles[keys[j]])) {
+                        if (j === keys.length - 1) {
+                            result.push(imgSet[i]);
+                            break;
+                        }
+                        continue;
+                    } else {
+                        break;
+                    }
+
+                }
+
+                if (imgSet[i][keys[j]] === styles[keys[j]]) {
+                    if (j === keys.length - 1) {
+                        result.push(imgSet[i]);
+                        break;
+                    }
+                    continue;
+                }
+                break;
+            }
+        }
+        this.setState({IMGS:result})
     }
 
     handleClose = () => {
