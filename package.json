@@ -1,8 +1,9 @@
 {
-  "name": "Intergem_v2",
+  "name": "intertem.com",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "react-scripts": "2.1.8"
   },
   "dependencies": {

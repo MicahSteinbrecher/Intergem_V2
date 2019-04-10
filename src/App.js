@@ -23,7 +23,9 @@ class App extends Component {
                 weddingBands: {
                     style: ''
                 },
-                fineJewelry: {}
+                fineJewelry: {
+                    type: '',
+                }
             },
         }
     }
@@ -66,7 +68,9 @@ class App extends Component {
                 weddingBands: {
                     style: ''
                 },
-                fineJewelry: {}
+                fineJewelry: {
+                    type:'',
+                }
             },
         });
     }

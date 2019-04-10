@@ -30,6 +30,7 @@ class Filter extends Component {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu className="Font">
+                                <Dropdown.Item onSelect={()=>this.props.onSelect(1,'metal', '')}>All</Dropdown.Item>
                                 <Dropdown.Item onSelect={()=>this.props.onSelect(1,'metal', 'Platinum')}>Platinum</Dropdown.Item>
                                 <Dropdown.Item onSelect={()=>this.props.onSelect(1,'metal', 'Yellow Gold')}>Yellow Gold</Dropdown.Item>
                                 <Dropdown.Item onSelect={()=>this.props.onSelect(1,'metal', 'White Gold')}>White Gold</Dropdown.Item>
@@ -45,6 +46,7 @@ class Filter extends Component {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu className="Font">
+                                <Dropdown.Item onSelect={()=>this.props.onSelect(1,'style','')}>All</Dropdown.Item>
                                 <Dropdown.Item onSelect={()=>this.props.onSelect(1,'style','Halo')}>Halo</Dropdown.Item>
                                 <Dropdown.Item onSelect={()=>this.props.onSelect(1,'style','Fancy')}>Fancy</Dropdown.Item>
                                 <Dropdown.Item onSelect={()=>this.props.onSelect(1,'style','Vintage')}>Vintage</Dropdown.Item>
@@ -64,11 +66,34 @@ class Filter extends Component {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu className="Font">
+                                <Dropdown.Item onSelect={()=>this.props.onSelect(2,'style','')}>All</Dropdown.Item>
                                 <Dropdown.Item onSelect={()=>this.props.onSelect(2,'style','Wedding')}>Wedding Band</Dropdown.Item>
                                 <Dropdown.Item onSelect={()=>this.props.onSelect(2,'style','Eternity')}>Eternity Band</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
                         <p className="Category">{this.props.styles.weddingBands.style}</p>
+                    </div>
+                </div>
+            );
+        }
+        else if (this.props.activeScreen===3) {
+            return (
+                <div className="filter">
+                    <div className="row">
+                        <Dropdown>
+                            <Dropdown.Toggle style={{width:'100px', color: '#282c34', backgroundColor: 'aliceblue', borderColor: 'Black'}} className="Font" variant="info" id="dropdown-basic">
+                                Type
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu className="Font">
+                                <Dropdown.Item onSelect={()=>this.props.onSelect(3,'type','')}>All</Dropdown.Item>
+                                <Dropdown.Item onSelect={()=>this.props.onSelect(3,'type','Bracelet')}>Bracelet</Dropdown.Item>
+                                <Dropdown.Item onSelect={()=>this.props.onSelect(3,'type','Earrings')}>Earrings</Dropdown.Item>
+                                <Dropdown.Item onSelect={()=>this.props.onSelect(3,'type','Watch')}>Watch</Dropdown.Item>
+                                <Dropdown.Item onSelect={()=>this.props.onSelect(3,'type','Necklace')}>Necklace</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                        <p className="Category">{this.props.styles.fineJewelry.type}</p>
                     </div>
                 </div>
             );
